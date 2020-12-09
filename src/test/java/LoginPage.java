@@ -2,15 +2,19 @@ import org.openqa.selenium.By;
 
 public class LoginPage extends BasePage {
     // Click on כניסה/הרשמה
-    public void pressElement() {
+    public void pressElement() throws InterruptedException {
         String clickEnterOrRegistry = "span[class=seperator-link]";
-        clickElement(By.cssSelector(clickEnterOrRegistry));  // click on כניסה/הרשמה
+        Thread.sleep(5000);//I put it only to check why this page is not opened
+        clickElement(By.cssSelector(clickEnterOrRegistry));// click on כניסה/הרשמה
+        ////////////////////////////////
+        Thread.sleep(400);//I put it only to check why this page is not opened
 
         String clickRegistration = "span[class=text-btn]";
         clickElement(By.cssSelector(clickRegistration)); // click on הרשמה
+
     }
     public void fillFirstName(){
-        String firstName= "input[id=ember1296]";
+        String firstName= "input[id=ember1237]";
         sendKeysToElement(By.cssSelector(firstName), "Ana");
     }
     // fill mail
@@ -20,17 +24,17 @@ public class LoginPage extends BasePage {
     }
     // fill password
     public void fillUserPassword() {
-        String userPassword = "input[required type=password]";
+        String userPassword = "input[id=valPass]";
         sendKeysToElement(By.cssSelector(userPassword), "Shiur011");
     }
     //fill assure password
     public void fillAssurePassword() {
-        String userAssurePassword = "input[id=1578]";
+        String userAssurePassword = "input[id=ember1243]";
         sendKeysToElement(By.cssSelector(userAssurePassword), "Shiur011");
     }
     //submit registration to BuyMe
-    public void submit() {
-        String submitRegistration = "button[class=ui-btn orange large]";
+    public void clickSubmit() {
+        String submitRegistration = "button[type=submit]";
         clickElement(By.cssSelector(submitRegistration));  // click on כניסה/הרשמה
     }
     }

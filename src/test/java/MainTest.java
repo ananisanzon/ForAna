@@ -16,11 +16,14 @@ public class MainTest {
     }
 
     @Test
-    public void test01_login() {
+    public void test01_login() throws InterruptedException {
         LoginPage loginPage = new LoginPage();
         loginPage.pressElement(); //  click on כניסה/הרשמה
+        loginPage.fillFirstName();  //fill first name
         loginPage.fillUserEmail();// fill mail
         loginPage.fillUserPassword(); // fill password
+        loginPage.fillAssurePassword();
+        loginPage.clickSubmit(); //לחץ על הרשמה ל BuyMe
     }
 
     //@AfterClass
