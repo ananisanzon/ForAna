@@ -35,7 +35,6 @@ public class LoginPage extends BasePage {
         String userMail = "input[data-parsley-type=email]";
         sendKeysToElement(By.cssSelector(userMail), "ana.nisanzon@gmail.com");
         Assert.assertEquals(userMail, "ana.nisanzon@gmail.com");
-
     }
     // fill password
     public void fillUserPassword() {
