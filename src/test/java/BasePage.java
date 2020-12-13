@@ -6,7 +6,7 @@ public class BasePage {
         getWebElement(locator).click();
     }
 
-    private WebElement getWebElement(By locator) {
+    protected WebElement getWebElement(By locator) {
 
         return DriverSingleton.getDriverInstance().findElement(locator);
     }

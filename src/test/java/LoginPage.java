@@ -21,13 +21,14 @@ public class LoginPage extends BasePage {
         String firstNameClick= "input[id=ember1237]";
         clickElement(By.cssSelector(firstNameClick));
     }
-    public void fillFirstName(){
-        String firstName= "input[id=ember1237]";
+    public void fillFirstName() throws InterruptedException {
+        String firstName = "input[id=ember1237]";
+        WebElement firstNameElement = getWebElement(By.cssSelector(firstName));
         sendKeysToElement(By.cssSelector(firstName), "Ana");
-        WebElement nameToAssert= new  WebElement();{
-            nameToAssert="Ana";
-            Assert.assertEquals(nameToAssert.getText(), nameToAssert);
-        }
+
+        String nameToAssert = "Ana";
+        Assert.assertEquals(firstNameElement.getText(), nameToAssert);
+
     }
     // fill mail
     public void fillUserEmail() {
