@@ -19,7 +19,7 @@ public class MainTest {
     public void test01_login() throws InterruptedException {
         LoginPage loginPage = new LoginPage();
         loginPage.pressElement(); //  click on כניסה/הרשמה
-        loginPage.pressTextField();//click on first name field
+        loginPage.pressTextField();//click on first name field.
         loginPage.fillFirstName();  //fill first name
         loginPage.fillUserEmail();// fill mail
         loginPage.fillUserPassword(); // fill password
