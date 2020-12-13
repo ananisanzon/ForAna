@@ -4,7 +4,6 @@ import org.testng.Assert;
 import java.util.List;
 
 public class LoginPage extends BasePage {
-    private WebDriver driver;
     // Click on כניסה/הרשמה
     public void pressElement() throws InterruptedException {
         String clickEnterOrRegistry = "span[class=seperator-link]";
