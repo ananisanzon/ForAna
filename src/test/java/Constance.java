@@ -1,3 +1,5 @@
-public class Constance {
-    public final static String FIRST_MAME= "Ana";
+import org.openqa.selenium.By;
+
+public class Constance{
+    public  static final String FIRST_MAME= "Ana";
 }

@@ -2,6 +2,7 @@ import org.openqa.selenium.*;
 import org.testng.Assert;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends BasePage {
     // Click on כניסה/הרשמה
@@ -25,10 +26,10 @@ public class LoginPage extends BasePage {
         String firstName = "input[id=ember1237]";
         WebElement firstNameElement = getWebElement(By.cssSelector(firstName));
         sendKeysToElement(By.cssSelector(firstName), "Ana");
-       // String nameToAssert = "Ana";
+        // String nameToAssert = "Ana";
         //Assert.assertEquals(firstNameElement.getText(), nameToAssert);
+        Thread.sleep(1000);//I put it only to check why this page is not opened
         Assert.assertEquals(firstNameElement.getAttribute("Ana"),Constance.FIRST_MAME);
-
 
     }
     // fill mail
