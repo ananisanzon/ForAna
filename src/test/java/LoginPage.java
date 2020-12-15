@@ -25,32 +25,39 @@ public class LoginPage extends BasePage {
         String firstName = "input[id=ember1237]";
         WebElement firstNameElement = getWebElement(By.cssSelector(firstName));
         sendKeysToElement(By.cssSelector(firstName), "Ana");
+       // String nameToAssert = "Ana";
+        //Assert.assertEquals(firstNameElement.getText(), nameToAssert);
+        Assert.assertEquals(firstNameElement.getAttribute("Ana"),Constance.FIRST_MAME);
 
-        String nameToAssert = "Ana";
-        Assert.assertEquals(firstNameElement.getText(), nameToAssert);
 
     }
     // fill mail
     public void fillUserEmail() {
         String userMail = "input[data-parsley-type=email]";
+      //  WebElement userEmail= getWebElement(By.cssSelector(userMail));
         sendKeysToElement(By.cssSelector(userMail), "ana.nisanzon@gmail.com");
-        Assert.assertEquals(userMail, "ana.nisanzon@gmail.com");
+      //  String mailToAssert= "ana.nisanzon@gmail.com";
+      //  Assert.assertEquals(userEmail.getText(),mailToAssert);
     }
     // fill password
     public void fillUserPassword() {
         String userPassword = "input[id=valPass]";
         sendKeysToElement(By.cssSelector(userPassword), "Shiur011");
-        Assert.assertEquals(userPassword,"Shiur011");
+      //  Assert.assertEquals(userPassword,"Shiur011");
     }
     //fill assure password
     public void fillAssurePassword() {
         String userAssurePassword = "input[id=ember1243]";
         sendKeysToElement(By.cssSelector(userAssurePassword), "Shiur011");
-        Assert.assertEquals(userAssurePassword,"Shiur011");
+      //  Assert.assertEquals(userAssurePassword,"Shiur011");
     }
     //submit registration to BuyMe
     public void clickSubmit() {
         String submitRegistration = "button[type=submit]";
         clickElement(By.cssSelector(submitRegistration));  // click on כניסה/הרשמה
     }
+    //click on לכניסה.
+    //להוסיף תנאי שרק אם המשתמש כבר קיים , רק אז לחץ על -לכניסה.
+
+
     }
