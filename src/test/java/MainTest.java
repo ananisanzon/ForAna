@@ -1,5 +1,4 @@
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -17,20 +16,26 @@ public class MainTest {
 
     @Test
     public void test01_login() throws InterruptedException {
-        LoginPage loginPage = new LoginPage();
-        loginPage.pressElement(); //  click on כניסה/הרשמה
+        LoginPage loginPage1 = new LoginPage();
+        loginPage1.clickEntryOrRegestry(); //  click on כניסה/הרשמה
     }
     @Test
     public void test02_regerestry() throws InterruptedException {
-        LoginPage loginPage1= new LoginPage();
-        loginPage1.pressTextField();//click on first name field.
-        loginPage1.fillFirstName();  //fill first name
-        loginPage1.fillUserEmail();// fill mail
-        loginPage1.fillUserPassword(); // fill password
-        loginPage1.fillAssurePassword();
-        loginPage1.clickSubmit(); //לחץ על הרשמה ל BuyMe
+        LoginPage loginpage1= new LoginPage();
+        loginpage1.focusOnFirstNAme();//click on first name field.
+        loginpage1.fillFirstName();  //fill first name
+        loginpage1.fillUserEmail();// fill mail
+        loginpage1.fillUserPassword(); // fill password
+        loginpage1.fillAssurePassword();
+        loginpage1.clickSubmit(); //לחץ על הרשמה ל BuyMe
+        loginpage1.clickEntry(); //לחץ על כניסה
     }
-
+    @Test
+    public void test03_homePage() throws InterruptedException {
+        HomePage homePage= new HomePage();
+        homePage.clickToHome();
+        homePage.chooseShum();
+    }
 
     //@AfterClass
     //public static void afterClass() {

@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends BasePage {
+    private static WebDriver driver;
     // Click on כניסה/הרשמה
-    public void pressElement() throws InterruptedException {
+    public void clickEntryOrRegestry() throws InterruptedException {
         String clickEnterOrRegistry = "span[class=seperator-link]";
         Thread.sleep(5000);//I put it only to check why this page is not opened
         clickElement(By.cssSelector(clickEnterOrRegistry));// click on כניסה/הרשמה
@@ -18,7 +19,7 @@ public class LoginPage extends BasePage {
 
     }
     //Click on first name field
-    public void pressTextField(){
+    public void focusOnFirstNAme(){
         String firstNameClick= "input[id=ember1237]";
         clickElement(By.cssSelector(firstNameClick));
     }
@@ -26,10 +27,8 @@ public class LoginPage extends BasePage {
         String firstName = "input[id=ember1237]";
         WebElement firstNameElement = getWebElement(By.cssSelector(firstName));
         sendKeysToElement(By.cssSelector(firstName), "Ana");
-        // String nameToAssert = "Ana";
-        //Assert.assertEquals(firstNameElement.getText(), nameToAssert);
-        Thread.sleep(1000);//I put it only to check why this page is not opened
-        Assert.assertEquals(firstNameElement.getAttribute("Ana"),Constance.FIRST_MAME);
+        String nameToAssert = "Ana";
+        Assert.assertEquals(firstNameElement.getAttribute("value"),Constance.FIRST_MAME);
 
     }
     // fill mail
@@ -55,8 +54,15 @@ public class LoginPage extends BasePage {
     //submit registration to BuyMe
     public void clickSubmit() {
         String submitRegistration = "button[type=submit]";
-        clickElement(By.cssSelector(submitRegistration));  // click on כניסה/הרשמה
+        submit(By.cssSelector(submitRegistration));// click on כניסה/הרשמה
     }
+    //לחץ על כניסה
+    public void clickEntry() throws InterruptedException {
+        String entry= "span[class=text-btn]";
+        Thread.sleep(600);//I put it only to check why this page is not opened
+        clickElement(By.cssSelector(entry));
+    }
+
     //click on לכניסה.
     //להוסיף תנאי שרק אם המשתמש כבר קיים , רק אז לחץ על -לכניסה.
 
