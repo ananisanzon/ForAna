@@ -35,6 +35,9 @@ public class MainTest {
         HomePage homePage= new HomePage();
         homePage.clickToHome();
         homePage.chooseShum();
+        homePage.chooseEizor();
+        homePage.chooseCategory();
+        //homePage.clickFindMePresent();
     }
 
     //@AfterClass

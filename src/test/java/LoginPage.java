@@ -20,11 +20,11 @@ public class LoginPage extends BasePage {
     }
     //Click on first name field
     public void focusOnFirstNAme(){
-        String firstNameClick= "input[id=ember1237]";
+        String firstNameClick= "input[id=ember1280]";
         clickElement(By.cssSelector(firstNameClick));
     }
     public void fillFirstName() throws InterruptedException {
-        String firstName = "input[id=ember1237]";
+        String firstName = "input[id=ember1280]";
         WebElement firstNameElement = getWebElement(By.cssSelector(firstName));
         sendKeysToElement(By.cssSelector(firstName), "Ana");
         String nameToAssert = "Ana";
