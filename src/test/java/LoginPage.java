@@ -20,13 +20,14 @@ public class LoginPage extends BasePage {
     }
     //Click on first name field
     public void focusOnFirstNAme(){
-        String firstNameClick= "input[id=ember1280]";
-        clickElement(By.cssSelector(firstNameClick));
+        String firstNameClick= "//input[@placeholder='שם פרטי']";
+        clickElement(By.xpath(firstNameClick));
     }
+    //fill first name
     public void fillFirstName() throws InterruptedException {
-        String firstName = "input[id=ember1280]";
-        WebElement firstNameElement = getWebElement(By.cssSelector(firstName));
-        sendKeysToElement(By.cssSelector(firstName), "Ana");
+        String firstName = "//input[@placeholder='שם פרטי']";
+        WebElement firstNameElement = getWebElement(By.xpath(firstName));
+        sendKeysToElement(By.xpath(firstName), "Ana");
         String nameToAssert = "Ana";
         Assert.assertEquals(firstNameElement.getAttribute("value"),Constance.FIRST_MAME);
 
@@ -47,8 +48,8 @@ public class LoginPage extends BasePage {
     }
     //fill assure password
     public void fillAssurePassword() {
-        String userAssurePassword = "input[id=ember1243]";
-        sendKeysToElement(By.cssSelector(userAssurePassword), "Shiur011");
+        String userAssurePassword = "//input[@placeholder='אימות סיסמה']";
+        sendKeysToElement(By.xpath(userAssurePassword), "Shiur011");
       //  Assert.assertEquals(userAssurePassword,"Shiur011");
     }
     //submit registration to BuyMe
