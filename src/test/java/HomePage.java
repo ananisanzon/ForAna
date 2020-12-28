@@ -6,6 +6,11 @@ import org.testng.Assert;
 
 public class HomePage extends BasePage {
     private static WebDriver driver;
+
+    public HomePage() {
+        driver= DriverSingleton.getDriverInstance();
+
+    }
     // לחץ על כניסה לBuyme
     public void clickToHome() {
         String submitHome = "button[type=submit]";
@@ -14,22 +19,25 @@ public class HomePage extends BasePage {
     //choose sum
     public void chooseShum() throws InterruptedException {
        String shum= "סכום";
-      clickElement(By.linkText(shum));
-
-     //  WebElement combo= driver.findElement(By.linkText(shum));
-      // Select sumChoose= new Select(combo);
-       //sumChoose.selectByIndex(1);
-       driver.findElements(By.linkText("active-result")).get(2).click();
+       clickElement(By.linkText(shum));
+       driver.findElement(By.linkText(shum));
+       driver.findElements(By.className("active-result")).get(2).click();
         }
     public void chooseEizor(){
         String eizor="אזור";
         clickElement(By.linkText(eizor));
-        driver.findElement(By.xpath("<span>אזור</span>")).click();
+        driver.findElement(By.linkText(eizor));
+        driver.findElements(By.className("active-result")).get(3).click();
     }
     public void chooseCategory(){
         String category= "קטגוריה";
         clickElement(By.linkText(category));
-        driver.findElement(By.xpath("<span>קטגוריה</span>")).click();
+        driver.findElement(By.linkText(category));
+        driver.findElements(By.className("active-result")).get(7).click();
+    }
+    public void clickFindMePresent() {
+        String findPresent = "תמצאו לי מתנה";
+        clickElement(By.linkText(findPresent));
     }
     }
 

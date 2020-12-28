@@ -37,11 +37,20 @@ public class MainTest {
         homePage.chooseShum();
         homePage.chooseEizor();
         homePage.chooseCategory();
-        //homePage.clickFindMePresent();
+        homePage.clickFindMePresent();
+    }
+    @Test
+    public void test04_PickBusiness(){
+        PickBusiness pickBusiness=new PickBusiness();
+        pickBusiness.AssertWebsiteUrl();
+        pickBusiness.PickBuisness();
+        pickBusiness.choosePresentWhithPrice();
+
+        }
     }
 
     //@AfterClass
     //public static void afterClass() {
     //    driver.quit();
     //}
-}
+
