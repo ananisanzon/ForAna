@@ -45,7 +45,6 @@ public class MainTest {
         pickBusiness.AssertWebsiteUrl();
         pickBusiness.PickBuisness();
         pickBusiness.choosePresentWhithPrice();
-
         }
     }
 
