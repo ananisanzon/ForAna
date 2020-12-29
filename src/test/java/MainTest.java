@@ -40,7 +40,7 @@ public class MainTest {
         homePage.clickFindMePresent();
     }
     @Test
-    public void test04_PickBusiness(){
+    public void test04_PickBusiness() throws InterruptedException {
         PickBusiness pickBusiness=new PickBusiness();
         pickBusiness.AssertWebsiteUrl();
         pickBusiness.PickBuisness();
