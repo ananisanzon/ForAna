@@ -42,9 +42,10 @@ public class MainTest {
     @Test
     public void test04_PickBusiness() throws InterruptedException {
         PickBusiness pickBusiness=new PickBusiness();
-        pickBusiness.AssertWebsiteUrl();
-        pickBusiness.PickBuisness();
+      //  pickBusiness.AssertWebsiteUrl();
+        pickBusiness.pickBuisness();
         pickBusiness.choosePresentWhithPrice();
+        pickBusiness.specificPresent();
         }
     }
 
