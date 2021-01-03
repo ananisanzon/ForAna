@@ -51,7 +51,7 @@ public class MainTest {
     public void test05_Send() throws InterruptedException {
         SendAndRecive sendAndRecive= new SendAndRecive();
         sendAndRecive.radioButtonToSomeoneElse();
-       // sendAndRecive.whomToSend();
+       sendAndRecive.whomToSend();
     }
     }
 

@@ -9,11 +9,12 @@ public class SendAndRecive extends HomePage{
     }
     //בחר רדיו באטון למישהו אחר
     public void radioButtonToSomeoneElse(){
-        String toSomeoneElse= "למישהו אחר";
-        clickElement(By.linkText(toSomeoneElse));
+         String toSomeoneElse= "למישהו אחר";
+         clickElement(By.linkText(toSomeoneElse));
+         //String toSomeoneElse="ember7080";
+         //clickElement(By.id(toSomeoneElse));
     }
     public void whomToSend(){
-
         String whom = "מי הזוכה המאושר? יש להשלים את שם המקבל/ת";
         sendKeysToElement(By.linkText(whom), "Feiga");
     }
