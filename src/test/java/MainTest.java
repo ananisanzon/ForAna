@@ -47,6 +47,12 @@ public class MainTest {
         pickBusiness.choosePresentWhithPrice();
         pickBusiness.specificPresent();
         }
+    @Test
+    public void test05_Send() throws InterruptedException {
+        SendAndRecive sendAndRecive= new SendAndRecive();
+        sendAndRecive.radioButtonToSomeoneElse();
+       // sendAndRecive.whomToSend();
+    }
     }
 
     //@AfterClass

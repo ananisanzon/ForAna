@@ -10,11 +10,6 @@ public class PickBusiness extends HomePage {
     public  PickBusiness(){
         driver=DriverSingleton.getDriverInstance();
     }
-    //assert url
-   // public void AssertWebsiteUrl(){
-    //    String myUrl= driver.getCurrentUrl();
-     //   Assert.assertEquals(myUrl,Constance.OPENED_URL);
-   // }
     //click on plus of present
     public void pickBuisness(){
         String present= "Dream baby gift- מתנה ליולדת";

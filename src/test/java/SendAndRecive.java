@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class SendAndRecive extends HomePage{
@@ -6,7 +7,14 @@ public class SendAndRecive extends HomePage{
     public  SendAndRecive() {
         driver = DriverSingleton.getDriverInstance();
     }
+    //בחר רדיו באטון למישהו אחר
     public void radioButtonToSomeoneElse(){
+        String toSomeoneElse= "למישהו אחר";
+        clickElement(By.linkText(toSomeoneElse));
+    }
+    public void whomToSend(){
 
+        String whom = "מי הזוכה המאושר? יש להשלים את שם המקבל/ת";
+        sendKeysToElement(By.linkText(whom), "Feiga");
     }
 }
