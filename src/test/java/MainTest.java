@@ -48,10 +48,13 @@ public class MainTest {
         pickBusiness.specificPresent();
         }
     @Test
-    public void test05_Send() throws InterruptedException {
+    public void test05_SendAndRecive() throws InterruptedException {
         SendAndRecive sendAndRecive= new SendAndRecive();
         sendAndRecive.radioButtonToSomeoneElse();
-       sendAndRecive.whomToSend();
+        sendAndRecive.whomToSend();
+        sendAndRecive.assertSenderName();
+        sendAndRecive.pickEvent();
+        sendAndRecive.writeBlessing();
     }
     }
 
