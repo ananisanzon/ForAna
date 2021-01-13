@@ -55,6 +55,11 @@ public class MainTest {
         sendAndRecive.assertSenderName();
         sendAndRecive.pickEvent();
         sendAndRecive.writeBlessing();
+        sendAndRecive.attachImage();
+        sendAndRecive.whenToSend();
+        sendAndRecive.pickEmailOrSMS();
+        sendAndRecive.enterEmailAddressOrPhone();
+        sendAndRecive.pressShmira();
     }
     }
 
