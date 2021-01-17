@@ -32,8 +32,7 @@ public class SendAndRecive extends HomePage{
     }
     public void writeBlessing(){
         String braha= "textarea[rows='4']";
-        //----------------------------------------
-        //איך מוחקים את הברכה שמוצגת כברירת מחדל?
+        driver.findElement(By.cssSelector(braha)).clear();// לנקות את הברכה המובנית  בתיבת הטקסט
         sendKeysToElement(By.cssSelector(braha),"תזכו לגדלו לתורה לחופה ולמעשים טובים ");
     }
     public void attachImage(){
@@ -60,6 +59,6 @@ public class SendAndRecive extends HomePage{
         WebElement mekabel = getWebElement(By.xpath(mekabelName));
         Assert.assertEquals(mekabel.getAttribute("value"),Constance.MEKABEL_NAME);
 
-        String senderName=
+        //String senderName=
     }
 }
