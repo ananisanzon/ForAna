@@ -53,6 +53,7 @@ public class SendAndRecive extends HomePage{
     public void pressShmira(){
         String shmira = "button[type=submit]";
         clickElement(By.cssSelector(shmira));
+     new ElementScreenShot();
     }
     public void assertServerAndReciverName(){
         String mekabelName = "//input[@class='ember-view ember-text-field']";

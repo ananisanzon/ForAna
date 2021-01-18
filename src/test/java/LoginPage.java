@@ -1,4 +1,5 @@
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.List;
@@ -6,13 +7,16 @@ import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends BasePage {
     private static WebDriver driver;
+
+    public LoginPage() {
+        driver= DriverSingleton.getDriverInstance();
+
+    }
     // Click on כניסה/הרשמה
     public void clickEntryOrRegestry() throws InterruptedException {
         String clickEnterOrRegistry = "span[class=seperator-link]";
-        Thread.sleep(5000);//I put it only to check why this page is not opened
+       driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         clickElement(By.cssSelector(clickEnterOrRegistry));// click on כניסה/הרשמה
-        ////////////////////////////////
-        Thread.sleep(400);//I put it only to check why this page is not opened
 
         String clickRegistration = "span[class=text-btn]";
         clickElement(By.cssSelector(clickRegistration)); // click on הרשמה
@@ -60,7 +64,8 @@ public class LoginPage extends BasePage {
     //לחץ על כניסה
     public void clickEntry() throws InterruptedException {
         String entry= "span[class=text-btn]";
-        Thread.sleep(600);//I put it only to check why this page is not opened
+        //Thread.sleep(600);//I put it only to check why this page is not opened
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         clickElement(By.cssSelector(entry));
     }
 
